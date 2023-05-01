@@ -12,6 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
 body {
   background-color: var(--light-grey);
 }

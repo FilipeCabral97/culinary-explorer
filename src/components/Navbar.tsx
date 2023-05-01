@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -13,7 +14,7 @@ function Navbar() {
             </div>
             <ul className="nav-list">
               <li className="dropdown">
-                <div className="explore-dropdown">Recipes</div>
+                <Link to={"/"} className="explore-dropdown">Recipes</Link>
                 <div className="dropdown-content">
                   <span>All Recipes</span>
                   <span>Popular</span>
@@ -21,7 +22,7 @@ function Navbar() {
                 </div>
               </li>
               <li className="dropdown">
-                <div className="explore-dropdown">Explore</div>
+                <Link to={"/explore"} className="explore-dropdown">Explore</Link>
                 <div className="dropdown-content">
                   <span>Cuisine</span>
                   <span>Diet</span>
