@@ -1,5 +1,13 @@
+:root {
+  --dark-grey: #222831;
+  --grey: #393e46;
+  --light-grey: #f2f2f2;
+  --orange: #f96d00;
+}
+
 .container {
   width: 80%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  /* border: 2px solid red; */
 }
