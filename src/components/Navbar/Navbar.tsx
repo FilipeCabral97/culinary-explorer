@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = useCallback(() => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+
+      setLastScrollY(window.scrollY);
+    }
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY, controlNavbar]);
+
   return (
-    <header>
+    <header className={`${show ? "active" : "hidden"}`}>
       <nav>
         <div className="container">
           <div className="nav-wrapper">
@@ -14,7 +39,9 @@ function Navbar() {
             </div>
             <ul className="nav-list">
               <li className="dropdown">
-                <Link to={"/"} className="explore-dropdown">Recipes</Link>
+                <Link to={"/"} className="explore-dropdown">
+                  Recipes
+                </Link>
                 <div className="dropdown-content">
                   <span>All Recipes</span>
                   <span>Popular</span>
@@ -22,7 +49,9 @@ function Navbar() {
                 </div>
               </li>
               <li className="dropdown">
-                <Link to={"/explore"} className="explore-dropdown">Explore</Link>
+                <Link to={"/explore"} className="explore-dropdown">
+                  Explore
+                </Link>
                 <div className="dropdown-content">
                   <span>Cuisine</span>
                   <span>Diet</span>

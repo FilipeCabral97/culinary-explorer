@@ -1,8 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Explore from "./pages/Explore";
+import Home from "./pages/Home/Home";
+import Explore from "./pages/Explore/Explore";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             {/* ---------- EXPLORE ---------- */}
             <Route path="/explore" element={<Explore />} />
           </Routes>
+          <footer style={{ height: "500px" }}></footer>
         </div>
       </div>
     </Router>
