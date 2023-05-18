@@ -1,0 +1,39 @@
+@import "../../layout.css";
+
+.modal {
+  max-width: min(60%, 500px);
+  max-height: 300px;
+
+  margin: auto;
+  padding: 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 26px;
+  font-size: 26px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  background: linear-gradient(10deg, #ffaa00, #ff6a00);
+  color: var(--light-grey);
+
+  cursor: pointer;
+}
