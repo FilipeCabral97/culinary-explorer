@@ -1,8 +1,8 @@
 @import "./../../layout.css";
 
 .line-container {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding: 1rem 0 3rem 0;
+  /* border: 2px solid red; */
 }
 
 h2 {
@@ -18,5 +18,6 @@ h2 {
 
 h2 span {
   background: var(--light-grey);
+  color: #222831;
   padding: 0 10px;
 }

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Backdrop from "../../components/Backdrop/Backdrop";
+import Backdrop from "../Backdrop/Backdrop";
 import "./WorkInProgress.css";
 
 interface IWorkInProgress {

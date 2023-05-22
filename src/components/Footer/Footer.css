@@ -1,0 +1,35 @@
+@import "../../layout.css";
+
+footer {
+  margin-top: 20px;
+  padding: 60px;
+  background-color: var(--dark-grey);
+}
+
+.github-container {
+    font-weight: 700;
+}
+
+.github-date{
+    color: var(--grey);
+}
+
+.footer-container > div {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  font-style: italic;
+  color: var(--orange);
+}
+
+.social-media-container {
+  gap: 2rem;
+}
+
+a {
+  color: var(--light-grey);
+}

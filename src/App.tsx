@@ -4,19 +4,22 @@ import Home from "./pages/Home/Home";
 import Explore from "./pages/Explore/Explore";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-import WorkInProgress from "./pages/WorkInProgress/WorkInProgress";
+import WorkInProgress from "./components/WorkInProgress/WorkInProgress";
 import { ModalContainer } from "./components/ModalContainer/ModalContainer";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [showWorkInProgress, setShowWorkInProgress] = useState<boolean>(false);
 
   const handleContinue = () => {
     setShowWorkInProgress(false);
+    document.body.classList.remove("modal-open");
   };
 
   useEffect(() => {
     setTimeout(() => {
       setShowWorkInProgress(true);
+      document.body.classList.add("modal-open");
     }, 1500);
   }, []);
 
@@ -31,13 +34,10 @@ const App = () => {
           <Navbar />
           <div className="content">
             <Routes>
-              {/* ---------- RECIPES ---------- */}
               <Route path="/" element={<Home />} />
-
-              {/* ---------- EXPLORE ---------- */}
               <Route path="/explore" element={<Explore />} />
             </Routes>
-            <footer style={{ height: "500px" }}></footer>
+            <Footer />
           </div>
         </div>
       </Router>

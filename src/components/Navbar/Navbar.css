@@ -85,6 +85,10 @@ nav {
 }
 
 /* ----- dropdown ----- */
+.explore-dropdown:visited {
+  color: var(--dark-grey);
+}
+
 .dropdown {
   position: relative;
   display: inline-block;

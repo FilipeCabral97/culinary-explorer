@@ -1,0 +1,23 @@
+@import "../../layout.css";
+
+.pizza-container {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pizza-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.dish {
+  height: 300px;
+  border-radius: 5px;
+
+  background: url("../../images/food1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

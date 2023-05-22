@@ -18,9 +18,13 @@ a {
 
 a:visited {
   text-decoration: none;
-  color: var(--dark-grey);
+  /* color: var(--dark-grey); */
 }
 
 body {
   background-color: var(--light-grey);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
