@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
-import "./Backdrop.css"
+import "./Backdrop.css";
+import { ReactElement } from "react";
 
-const Backdrop = ({ children, onClick }: any) => {
+interface IBackdropProps {
+  children: ReactElement<HTMLDivElement>;
+  onClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+}
+
+const Backdrop: React.FC<IBackdropProps> = ({
+  children,
+  onClick,
+}: IBackdropProps) => {
   return (
     <motion.div
       className="backdrop"

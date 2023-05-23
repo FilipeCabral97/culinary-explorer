@@ -5,7 +5,9 @@ interface IHorizontalLineProps {
   children: string;
 }
 
-const HorizontalLine = ({ children }: IHorizontalLineProps) => {
+const HorizontalLine: React.FC<IHorizontalLineProps> = ({
+  children,
+}: IHorizontalLineProps) => {
   return (
     <div className="container line-container">
       <h2>

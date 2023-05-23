@@ -6,7 +6,7 @@ interface IHomeProps {
   children: string;
 }
 
-const HomeGrid = ({ children }: IHomeProps) => {
+const HomeGrid: React.FC<IHomeProps> = ({ children }: IHomeProps) => {
   return (
     <div className="container grid-container">
       <div className="grid big-left">

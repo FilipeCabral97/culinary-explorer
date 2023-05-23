@@ -8,7 +8,7 @@ import WorkInProgress from "./components/WorkInProgress/WorkInProgress";
 import { ModalContainer } from "./components/ModalContainer/ModalContainer";
 import Footer from "./components/Footer/Footer";
 
-const App = () => {
+const App: React.FC = () => {
   const [showWorkInProgress, setShowWorkInProgress] = useState<boolean>(false);
 
   const handleContinue = () => {

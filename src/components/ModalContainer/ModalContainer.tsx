@@ -5,7 +5,9 @@ interface IModalContainerProps {
   children: ReactNode;
 }
 
-export const ModalContainer = ({ children }: IModalContainerProps) => (
+export const ModalContainer: React.FC<IModalContainerProps> = ({
+  children,
+}: IModalContainerProps) => (
   <AnimatePresence initial={false} mode="wait">
     {children}
   </AnimatePresence>

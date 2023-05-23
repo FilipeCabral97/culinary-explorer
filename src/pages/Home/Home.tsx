@@ -4,7 +4,7 @@ import HorizontalLine from "../../components/HorizontalLine/HorizontalLine";
 import ContentHint from "../../components/ContentHint/ContentHint";
 import PizzaGrid from "../../components/PizzaGrid/PizzaGrid";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <HomeGrid>Get inspired with these popular recipes</HomeGrid>

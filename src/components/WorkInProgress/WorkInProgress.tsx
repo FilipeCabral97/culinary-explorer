@@ -29,7 +29,10 @@ const dropIn = {
   },
 };
 
-const WorkInProgress = ({ handleClose, text }: IWorkInProgress) => {
+const WorkInProgress: React.FC<IWorkInProgress> = ({
+  handleClose,
+  text,
+}: IWorkInProgress) => {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div

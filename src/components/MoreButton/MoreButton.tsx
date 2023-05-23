@@ -6,7 +6,7 @@ interface IMoreButton {
   children: string;
 }
 
-const MoreButton = ({ children }: IMoreButton) => {
+const MoreButton: React.FC<IMoreButton> = ({ children }: IMoreButton) => {
   return (
     <motion.button
       className="more-btn"

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ContentHint.css";
 
-const ContentHint = () => {
+const ContentHint: React.FC = () => {
   return (
     <div className="container">
       <div className="hint-container">
